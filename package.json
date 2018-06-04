@@ -1,0 +1,42 @@
+{
+  "name": "drew-gurley-cellular-automata-demonstration",
+  "version": "1.0.0",
+  "description": "Interactive Conway Game of Life Built with React",
+  "scripts": {
+    "test": "jest --verbose",
+    "test:watch": "jest --watchAll",
+    "build": "brunch build",
+    "lint": "eslint --cache src",
+    "build:prod": "NODE_ENV=production brunch build --production",
+    "start": "brunch watch --server"
+  },
+  "author": "Drew Gurley <mrdrewgurley@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-brunch": "http://github.com/babel/babel-brunch",
+    "babel-eslint": "^8.1.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "brunch": "^2.10.8",
+    "npm": "^6.1.0",
+    "prop-types": "^15.5.10",
+    "ramda": "^0.24.1",
+    "react": "~16.0.0",
+    "react-dom": "~16.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1",
+    "stylus-brunch": "^2.10.0",
+    "uikit": "^3.0.0-rc.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-brunch": "^3.12.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.4.1",
+    "jest": "^23.0.0",
+    "react-test-renderer": "^16.4.0"
+  }
+}

@@ -1,0 +1,70 @@
+@import "_base"
+a
+ color #43ABC9 !important
+
+body
+  background white
+  border none
+
+  nav
+    background-color #3c6478 !important
+    height: 100px
+
+    p
+      margin-top: 20px
+
+    a
+      color #43ABC9 !important
+      font-size 1.25rem
+      text-decoration none !important
+
+    .uk-navbar-left
+      padding-left 30px
+
+    .uk-navbar-right
+      padding-right 30px
+
+    .uk-navbar-item
+      color white !important
+      font-family 'Roboto'
+      font-size 1.25rem
+      font-variant small-caps
+
+  .uk-heading-bullet
+    color #3C6478 !important
+
+  .uk-grid
+    margin-left 0 !important
+
+    #gameboard
+      padding-left 0
+
+  .board
+    display inline-block
+
+    .board-row
+      height 15px
+
+      .board-block
+        background-color #2e3338
+        display inline-block
+        width 15px
+        height 15px
+        cursor pointer
+        margin 0
+        padding 0
+        border 1px solid #111
+        transition background-color 0.15x ease-out
+
+        &:hover
+          background-color #484D52
+
+  .controls
+    button
+      width 125px !important
+
+  article
+    .uk-button-text
+      color #43ABC9 !important
+      &:before
+        border-bottom-color #43ABC9 !important

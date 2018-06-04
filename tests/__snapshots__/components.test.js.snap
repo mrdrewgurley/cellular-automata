@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Block Component renders with proper defaults 1`] = `
+<div
+  className="board-block"
+  onMouseDown={[Function]}
+  style={
+    Object {
+      "backgroundColor": null,
+    }
+  }
+/>
+`;
+
+exports[`Board Component renders with proper defaults 1`] = `
+<div
+  className="board"
+>
+  <div
+    className="board-row"
+  >
+    <div
+      className="board-block"
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#FFF",
+        }
+      }
+    />
+    <div
+      className="board-block"
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "backgroundColor": null,
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Controls Component renders with proper defaults 1`] = `
+<div
+  className="controls uk-button-group"
+>
+  <button
+    className="uk-button uk-button-default uk-margin-right"
+    onClick={[Function]}
+  >
+    START
+  </button>
+  <button
+    className="uk-button uk-button-default uk-margin-right"
+    onClick={[Function]}
+  >
+    RESET
+  </button>
+  <button
+    className="uk-button uk-button-default"
+    onClick={[Function]}
+  >
+    CLEAR
+  </button>
+</div>
+`;
