@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:300");
+@import url("vendor.css");
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  font-family: Roboto, sans-serif;
+}
+a {
+  color: #43abc9 !important;
+}
+body {
+  background: #fff;
+  border: none;
+}
+body nav {
+  background-color: #3c6478 !important;
+  height: 100px;
+}
+body nav p {
+  margin-top: 20px;
+}
+body nav a {
+  color: #43abc9 !important;
+  font-size: 1.25rem;
+  text-decoration: none !important;
+}
+body nav .uk-navbar-left {
+  padding-left: 30px;
+}
+body nav .uk-navbar-right {
+  padding-right: 30px;
+}
+body nav .uk-navbar-item {
+  color: #fff !important;
+  font-family: 'Roboto';
+  font-size: 1.25rem;
+  font-variant: small-caps;
+}
+body .uk-heading-bullet {
+  color: #3c6478 !important;
+}
+body .uk-grid {
+  margin-left: 0 !important;
+}
+body .uk-grid #gameboard {
+  padding-left: 0;
+}
+body .board {
+  display: inline-block;
+}
+body .board .board-row {
+  height: 15px;
+}
+body .board .board-row .board-block {
+  background-color: #2e3338;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #111;
+  transition: background-color 0.15x ease-out;
+}
+body .board .board-row .board-block:hover {
+  background-color: #484d52;
+}
+body .controls button {
+  width: 125px !important;
+}
+body article .uk-button-text {
+  color: #43abc9 !important;
+}
+body article .uk-button-text:before {
+  border-bottom-color: #43abc9 !important;
+}
+
+
+/*# sourceMappingURL=app.css.map*/
