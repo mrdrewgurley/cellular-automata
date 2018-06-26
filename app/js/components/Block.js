@@ -1,6 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+/**
+ * Block Component
+ * @desc Generates a block element in the game board
+ */
+
 const onMouseEvent = (flip, on) => () => {
   flip(on)
 }

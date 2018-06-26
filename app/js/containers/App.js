@@ -7,6 +7,11 @@ import * as BoardActions from '../actions/BoardActions'
 import Board, { BoardShape } from '../components/Board'
 import Controls from '../components/Controls'
 
+/**
+ * Application Container
+ * @desc Container for the application components
+ * @param {object} props - properties of the application
+ */
 const App = props => (
   <div>
     <Board
@@ -26,6 +31,7 @@ App.propTypes = {
   controls: PropTypes.object.isRequired
 }
 
+// map the state and dispatch actions
 export default connect(
   state => ({ ...state }),
   dispatch => ({ actions: bindActionCreators(BoardActions, dispatch) })

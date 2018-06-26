@@ -1,6 +1,11 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
+/**
+ * Controls Component
+ * @desc Generates the controls of the game
+ */
+
 export default class Controls extends PureComponent {
   handleClickReset = () => {
     this.stop()
@@ -28,7 +33,7 @@ export default class Controls extends PureComponent {
     clearInterval(window.interval)
   }
 
-  render() {
+  render () {
     return (
       <div className="controls uk-button-group">
         <button

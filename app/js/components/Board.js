@@ -2,6 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Block from './Block'
 
+/**
+ * Board Component
+ * @desc Generates the board element in the game
+ */
+
 const renderBlock = (flip, y) => (on, x) => (
   <Block
     key={x}
