@@ -1,11 +1,5 @@
 exports.config = {
-  overrides: {
-    production: {
-      plugins: {
-        off: ['eslint-brunch'],
-      },
-    },
-  },
+  overrides: {},
   conventions: {
     ignored: [
       /[\\/]_/,
@@ -29,7 +23,7 @@ exports.config = {
   npm: {
     enabled: true,
     styles: {
-      'uikit': ['dist/css/uikit.min.css']
+      'uikit': [ 'dist/css/uikit.min.css' ]
     }
   },
   plugins: {
@@ -39,7 +33,7 @@ exports.config = {
   },
   modules: {
     autoRequire: {
-      'js/app.js': ['js/app'],
+      'js/app.js': [ 'js/app' ],
     },
   },
 };

@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/app.css">
     <title>Drew Gurley &middot; Cellular Automata Demonstration</title>
   </head>
+
   <body>
     <div uk-sticky="sel-target: .uk-navbar; cls-active: uk-navbar-sticky">
       <nav class="uk-navbar">
@@ -13,8 +15,8 @@
             <p>
               <a href='mailto:&#109;&#114;&#100;&#114;&#101;&#119;&#103;&#117;&#114;&#108;&#101;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109'>
                 MR DREW GURLEY
-              </a><br>
-              director &middot; systems architect &middot; senior software engineer
+              </a>
+              <br> director &middot; systems architect &middot; senior software engineer
             </p>
           </div>
         </div>
@@ -37,56 +39,75 @@
           <div id="gameboard" class="uk-width-2-3" uk-scrollspy="cls: uk-animation-slide-left"></div>
           <div class="uk-width-1-3 uk-card uk-card-default uk-card-body uk-text-left" uk-scrollspy="cls: uk-animation-slide-right">
             <h3 class="uk-card-title">About the Author</h3>
-            <p>Drew has over fifteen years of experience in the Software Engineering field, with more than six years of Data Management experience -- acquisition, transformation, analytics and distribution.</p>
-            <p>He undertakes many roles including solutions architecture, technological strategy, project management, database administration, hands-on development and senior-level management.</p>
+            <p>Drew has over fifteen years of experience in the Software Engineering field, with more than six years of Data
+              Management experience -- acquisition, transformation, analytics and distribution.</p>
+            <p>He undertakes many roles including solutions architecture, technological strategy, project management, database
+              administration, hands-on development and senior-level management.</p>
           </div>
         </div>
-      </section>
+    </section>
 
-      <section class="uk-section uk-section-default">
-        <div class="uk-container uk-container-small">
-          <article class="uk-article" uk-scrollspy="cls: uk-animation-slide-bottom">
-            <h1 class="uk-article-title">
-              <a class="uk-link-reset" href="">Interactive Conway <i>Game of Life</i></a>
-            </h1>
-            <p class="uk-article-meta">
-              Created by <a href="mailto:&#109;&#114;&#100;&#114;&#101;&#119;&#103;&#117;&#114;&#108;&#101;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109">Drew Gurley</a> on May 30 2018
-            </p>
-            <p class="uk-text-lead">
-              A single-page, cursory code-sample for prospective employer review. This frontend application is powered by <a href="//facebook.github.io/react" target="_blank">React</a> & <a href="//react.js.org" target="_blank">Redux</a>, written in <a href="//es6-features.org" target="_blank">ES6</a>, linted with <a href="//eslint.org">ESLint</a>, tested with <a href="//facebook.github.io/jest" target="_blank">Jest</a> and built with <a href="//brunch.io" target="_blank">Brunch</a>.
-            </p>
-            <p>
-              The game is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves, or, for advanced players, by creating patterns with particular properties.
-            </p>
-            <p>
-              The game is a cellular automaton existing in an infinite, two-dimensional orthogonal grid of square cells, each of which exists in one of two possible states, activated or deactivated. Every cell interacts with its eight adjacent cells. At each interval in time, the following transitions occur:
+    <section class="uk-section uk-section-default">
+      <div class="uk-container uk-container-small">
+        <article class="uk-article" uk-scrollspy="cls: uk-animation-slide-bottom">
+          <h1 class="uk-article-title">
+            <a class="uk-link-reset" href="">Interactive Conway
+              <i>Game of Life</i>
+            </a>
+          </h1>
+          <p class="uk-article-meta">
+            Created by
+            <a href="mailto:&#109;&#114;&#100;&#114;&#101;&#119;&#103;&#117;&#114;&#108;&#101;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109">Drew Gurley</a> on May 30 2018
+          </p>
+          <p class="uk-text-lead">
+            A single-page, cursory code-sample for prospective employer review. This frontend application is powered by
+            <a
+              href="//facebook.github.io/react" target="_blank">React</a> &
+            <a href="//react.js.org" target="_blank">Redux</a>, written in
+            <a href="//es6-features.org" target="_blank">ES6</a>, tested with
+            <a href="//facebook.github.io/jest" target="_blank">Jest</a> and built with
+            <a href="//brunch.io" target="_blank">Brunch</a>.
+          </p>
+          <p>
+            The game is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.
+            One interacts with the Game of Life by creating an initial configuration and observing how it evolves, or, for
+            advanced players, by creating patterns with particular properties.
+          </p>
+          <p>
+            The game is a cellular automaton existing in an infinite, two-dimensional orthogonal grid of square cells, each of which
+            exists in one of two possible states, activated or deactivated. Every cell interacts with its eight adjacent
+            cells. At each interval in time, the following transitions occur:
 
-              <ol>
-                <li>Any activated cell with fewer than two activated neighbors deactivates</li>
-                <li>Any activated cell with two or three activated neighbors remains activated on to the next generation</li>
-                <li>Any activated cell with more than three activated neighbors deactivates</li>
-                <li>Any activated cell with exactly three activated neighbors becomes an activated cell</li>
-              </ol>
+            <ol>
+              <li>Any activated cell with fewer than two activated neighbors deactivates</li>
+              <li>Any activated cell with two or three activated neighbors remains activated on to the next generation</li>
+              <li>Any activated cell with more than three activated neighbors deactivates</li>
+              <li>Any activated cell with exactly three activated neighbors becomes an activated cell</li>
+            </ol>
 
-              The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed. Each generation is a pure function of the preceding one. The rules continue to be applied repeatedly to create further generations.
-            </p>
-            <div class="uk-grid-small uk-child-width-auto" uk-grid>
-              <div>
-                <a class="uk-button uk-button-text" href="mailto:&#109;&#114;&#100;&#114;&#101;&#119;&#103;&#117;&#114;&#108;&#101;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109">Contact</a>
-              </div>
-              <div>
-                <a class="uk-button uk-button-text" href="https://github.com/mrdrewgurley/cellular-automata/blob/master/public/docs/drew-gurley-resume.pdf" target="_blank">View Resume</a>
-              </div>
+            The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously
+            to every cell in the seed. Each generation is a pure function of the preceding one. The rules continue to be
+            applied repeatedly to create further generations.
+          </p>
+          <div class="uk-grid-small uk-child-width-auto" uk-grid>
+            <div>
+              <a class="uk-button uk-button-text" href="mailto:&#109;&#114;&#100;&#114;&#101;&#119;&#103;&#117;&#114;&#108;&#101;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109">Contact</a>
             </div>
-          </article>
-        </div>
-      </section>
+            <div>
+              <a class="uk-button uk-button-text" href="https://github.com/mrdrewgurley/cellular-automata/blob/master/public/docs/drew-gurley-resume.pdf"
+                target="_blank">View Resume</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <footer class="uk-section uk-section-default uk-text-center">
-        <a href="#" class="uk-icon-button" uk-totop uk-scroll></a>
-      </footer>
+    <footer class="uk-section uk-section-default uk-text-center">
+      <a href="#" class="uk-icon-button" uk-totop uk-scroll></a>
+    </footer>
 
     <script src="js/vendor.js"></script>
     <script src="js/app.js"></script>
   </body>
+
 </html>

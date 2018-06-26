@@ -30,12 +30,6 @@
     "uikit": "^3.0.0-rc.3"
   },
   "devDependencies": {
-    "eslint": "^3.15.0",
-    "eslint-brunch": "^3.12.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.4.1",
     "jest": "^23.0.0",
     "react-test-renderer": "^16.4.0"
   }

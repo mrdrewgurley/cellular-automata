@@ -1,6 +1,6 @@
 # React Cellular Automata Demo
 
-A single-page, cursory code-sample for prospective employer review. This frontend application is powered by [React](http://facebook.github.io/react) & [Redux](http://redux.js.org), written in [ES6](http://es6-features.org), linted with [ESLint](http://eslint.org), tested with [Jest](http://facebook.github.io/jest) and built with [Brunch](http://brunch.io).
+A single-page, cursory code-sample for prospective employer review. This frontend application is powered by [React](http://facebook.github.io/react) & [Redux](http://redux.js.org), written in [ES6](http://es6-features.org), tested with [Jest](http://facebook.github.io/jest) and built with [Brunch](http://brunch.io).
 
 [Click Here for a Live Demo](https://rawgit.com/mrdrewgurley/cellular-automata/master/public/index.html)
 
@@ -41,15 +41,15 @@ yarn install
 ```
 
 ### Running
-* Watches the project with continuous rebuild. This will also launch HTTP server with pushState
+* Watches the project with continuous rebuild. This will also launch HTTP server with pushState at http://localhost:3333/
 ```
-npm start
+yarn start
 ```
 
 ### Testing
 * Displays a verbose output of test results
 ```
-npm test
+yarn test
 ```
 
 ### Deployment

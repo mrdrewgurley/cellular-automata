@@ -164,6 +164,10 @@ var types = _interopRequireWildcard(_ActionTypes);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
+/**
+ * Board Actions
+ * @desc Binding of actions to respective ActionTypes
+ */
 var clear = exports.clear = (0, _reduxActions.createAction)(types.CLEAR);
 var flip = exports.flip = (0, _reduxActions.createAction)(types.FLIP);
 var reset = exports.reset = (0, _reduxActions.createAction)(types.RESET);
@@ -227,6 +231,11 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/**
+ * Block Component
+ * @desc Generates a block element in the game board
+ */
+
 var onMouseEvent = function onMouseEvent(flip, on) {
   return function () {
     flip(on);
@@ -279,6 +288,11 @@ var _Block = require('./Block');
 var _Block2 = _interopRequireDefault(_Block);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Board Component
+ * @desc Generates the board element in the game
+ */
 
 var renderBlock = function renderBlock(_flip, y) {
   return function (on, x) {
@@ -349,6 +363,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/**
+ * Controls Component
+ * @desc Generates the controls of the game
+ */
 
 var Controls = function (_PureComponent) {
   _inherits(Controls, _PureComponent);
@@ -437,6 +456,10 @@ Controls.propTypes = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+/**
+ * ActionTypes
+ * @desc List of ActionTypes 
+ */
 var CLEAR = exports.CLEAR = 'CLEAR';
 var FLIP = exports.FLIP = 'FLIP';
 var RESET = exports.RESET = 'RESET';
@@ -481,6 +504,11 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/**
+ * Application Container
+ * @desc Container for the application components
+ * @param {object} props - properties of the application
+ */
 var App = function App(props) {
   return _react2.default.createElement(
     'div',
@@ -500,16 +528,16 @@ App.propTypes = {
   actions: _propTypes2.default.object.isRequired,
   board: _Board.BoardShape.isRequired,
   controls: _propTypes2.default.object.isRequired
-};
 
-exports.default = (0, _reactRedux.connect)(function (state) {
+  // map the state and dispatch actions
+};exports.default = (0, _reactRedux.connect)(function (state) {
   return _extends({}, state);
 }, function (dispatch) {
   return { actions: (0, _redux.bindActionCreators)(BoardActions, dispatch) };
 })(App);
 });
 
-;require.register("js/models/board.js", function(exports, require, module) {
+;require.register("js/libs/board.js", function(exports, require, module) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -538,7 +566,7 @@ var makeBoard = exports.makeBoard = (0, _ramda.curry)(function (blockState, size
 var makeEmptyBoard = exports.makeEmptyBoard = makeBoard(FALSE);
 });
 
-;require.register("js/models/engine.js", function(exports, require, module) {
+;require.register("js/libs/engine.js", function(exports, require, module) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -605,7 +633,7 @@ var nextState = exports.nextState = function nextState(board) {
 };
 });
 
-;require.register("js/models/helpers.js", function(exports, require, module) {
+;require.register("js/libs/helpers.js", function(exports, require, module) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -716,16 +744,22 @@ var _ActionTypes = require('../constants/ActionTypes');
 
 var types = _interopRequireWildcard(_ActionTypes);
 
-var _engine = require('../models/engine');
+var _engine = require('../libs/engine');
 
-var _board = require('../models/board');
+var _board = require('../libs/board');
 
-var _helpers = require('../models/helpers');
+var _helpers = require('../libs/helpers');
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+/**
+ * Board Reducer
+ * @desc Reducer for the game board
+ * @param {object} actionHandlers - reducerMap for the game board
+ * @param {object} DEFAULT - default state
+ */
 var BOARD_SIZE = 30;
 var DEFAULT = (0, _board.makeBoard)(_helpers.randomizer, BOARD_SIZE);
 var actionHandlers = (_actionHandlers = {}, _defineProperty(_actionHandlers, types.CLEAR, function () {
@@ -761,6 +795,12 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+/**
+ * Controls Reducer
+ * @desc Reducer for the game controls
+ * @param {object} actionHandlers - reducerMap for the game controls
+ * @param {object} DEFAULT - default state
+ */
 var DEFAULT = {
   label: 'START',
   clear: false
@@ -810,6 +850,11 @@ var _controls2 = _interopRequireDefault(_controls);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/**
+ * Root Reducer
+ * @desc Reducer that combines the other application reducers
+ * @param {object} reducers - the reducers to combine
+ */
 var reducer = (0, _redux.combineReducers)({
   board: _board2.default,
   controls: _controls2.default
@@ -834,9 +879,9 @@ var _reducers2 = _interopRequireDefault(_reducers);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
+ * Application Store
  * @desc returns the applications store
  * @param {object} intialState - default dataset for the application store
- * @return {object}
  */
 exports.default = function (initialState) {
   return (0, _redux.createStore)(_reducers2.default, initialState);
